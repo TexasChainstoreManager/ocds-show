@@ -2,7 +2,7 @@
 	<aside id="buyer" class="panel panel-default">
 			<div class="panel-heading">
 				<h2>
-					{{ gettext("Buyer") }} 
+					{{ "Buyer" | gettext }}
 				</h2>
 			</div>
 			<div class="panel-body">
@@ -14,7 +14,7 @@
 						<div id="contactPoint" class="panel panel-default">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									{{ gettext("Contact Point")}}
+									{{ "Contact Point" | gettext}}
 								</h3>
 							</div>
 							<div class="panel-body">
@@ -25,10 +25,10 @@
 									<a href="mailto:{{buyer.contactPoint.email}}">{{buyer.contactPoint.email}}</a><br>
 								{% endif %}
 								{% if buyer.contactPoint.telephone %}
-									{{ gettext("Phone: ") }}{{buyer.contactPoint.telephone}} <br>
+									{{ "Phone: " | gettext }}{{buyer.contactPoint.telephone}} <br>
 								{% endif %}
 								{% if buyer.contactPoint.faxNumber %}
-									{{ gettext("Fax: ") }}{{buyer.contactPoint.faxNumber}} <br>
+									{{ "Fax: " | gettext }}{{buyer.contactPoint.faxNumber}} <br>
 								{% endif %}
 								{% if buyer.contactPoint.url %}
 									<a href="{{buyer.contactPoint.url}}" target="_blank">{{buyer.contactPoint.url}}</a><br>
@@ -39,11 +39,11 @@
 						<div id="contactPoint" class="panel panel-warning">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									{{ gettext("Contact Point")}}
+									{{ "Contact Point" | gettext}}
 								</h3>
 							</div>
 							<div class="panel-body">
-								{{ gettext("No contact data provided") }}
+								{{ "No contact data provided" | gettext }}
 							</div>
 						</div>
 					{% endif %}
@@ -51,7 +51,7 @@
 						<div id="address" class="panel panel-default">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									{{ gettext("Address")}}
+									{{ "Address" | gettext}}
 								</h3>
 							</div>
 							<div class="panel-body">
@@ -76,11 +76,11 @@
 						<div id="address" class="panel panel-warning">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									{{ gettext("Address")}}
+									{{ "Address" | gettext}}
 								</h3>
 							</div>
 							<div class="panel-body">
-								{{ gettext("No address data provided") }}
+								{{ "No address data provided" | gettext }}
 							</div>
 						</div>
 					{% endif %}
@@ -88,16 +88,16 @@
 						<div id="identifier" class="panel panel-default">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									{{ gettext("Identifiers") }}
+									{{ "Identifiers" | gettext }}
 								</h3>
 							</div>
 							<div class="panel-body">
 								<table class="table table-striped">
 									<thead>
 										<tr>
-											<th>{{ gettext("Scheme") }}</th>
-											<th>{{ gettext("Identifer") }}</th>
-											<th>{{ gettext("Legal Name") }}</th>
+											<th>{{ "Scheme" | gettext }}</th>
+											<th>{{ "Identifer" | gettext }}</th>
+											<th>{{ "Legal Name" | gettext }}</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -123,11 +123,11 @@
 						<div id="identifier" class="panel panel-warning">
 							<div class="panel-heading">
 								<h3 class="panel-title">
-									{{ gettext("Identifers") }}
+									{{ "Identifers" | gettext }}
 								</h3>
 							</div>
 							<div class="panel-body">
-								{{ gettext("No identifier data provided") }}
+								{{ "No identifier data provided" | gettext }}
 							</div>
 						</div>
 					{% endif %}
@@ -138,7 +138,7 @@
 	<aside id="buyer" class="panel panel-danger">
 		<div class="panel-heading">
 			<h2>
-				{{ gettext("No Buyer data provided") }}
+				{{ "No Buyer data provided" | gettext }}
 			</h2>
 		</div>
 	</aside>

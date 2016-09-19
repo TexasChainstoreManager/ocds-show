@@ -1,3 +1,5 @@
+false = False
+null = None
 example_release = {
         "language": "en",
         "ocid": "ocds-213czf-000-00001",

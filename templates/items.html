@@ -1,7 +1,7 @@
-<div class="panel panel-{% if items|length > 0 %}default{% else %}warning{% endif %}">
+<div class="panel panel-{% if (items|length) > 0 %}default{% else %}warning{% endif %}">
 	<div class="panel-heading">
 		<h3 class="panel-title">
-			{{ gettext("Items") }}
+			{{ "Items" | gettext }}
 		</h3>
 	</div>
 	<div class="panel-body">
@@ -9,11 +9,11 @@
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th>{{ gettext("ID") }}</th>
-						<th>{{ gettext("Description") }}</th>
-						<th>{{ gettext("Classification") }} <small>({{ gettext("Scheme - ID") }})</small></th>
-						<th>{{ gettext("Quantity") }} <small>({{ gettext("Unit") }})</small></th>
-						<th>{{ gettext("Value per unit") }}</th>
+						<th>{{ "ID" | gettext }}</th>
+						<th>{{ "Description" | gettext }}</th>
+						<th>{{ "Classification" | gettext }} <small>({{ "Scheme - ID" | gettext }})</small></th>
+						<th>{{ "Quantity" | gettext }} <small>({{ "Unit" | gettext }})</small></th>
+						<th>{{ "Value per unit" | gettext }}</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -44,16 +44,16 @@
 										</small>
 									{% endfor %}
 								{% endif %}
-							
+
 							</td>
 							<td>{{ item.quantity }} <small>({{ item.unit.name }})</small></td>
 							<td>{{ item.unit.value.amount|currency }} {{ item.unit.value.currency }}</td>
 						</tr>
 					{% endfor %}
-				</tbody>	
+				</tbody>
 			</table>
 		{% else %}
-			{{ gettext("No items provided") }}
+			{{ "No items provided" | gettext }}
 		{% endif %}
 	</div>
 </div>

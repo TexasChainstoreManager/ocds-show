@@ -1,7 +1,7 @@
 <section id="planning" class="panel panel-default">
 	<div class="panel-heading">
 		<h2>
-			{{ gettext("Planning") }}
+			{{ "Planning" | gettext }}
 		</h2>
 	</div>
 	<div class="panel-body">
@@ -10,7 +10,7 @@
 				<div class="panel panel-{% if planning.budget.amount.amount %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Budget amount") }} <small>({{ gettext("ID") }})</small>
+							{{ "Budget amount" | gettext }} <small>({{ "ID" | gettext }})</small>
 						</h3>
 					</div>
 					<div class="panel-body">
@@ -19,12 +19,12 @@
 								{{ planning.budget.amount.amount|currency }}
 								{{planning.budget.amount.currency}}
 							{% else %}
-								{{ gettext("Budget amount not provided") }}
+								{{ "Budget amount not provided" | gettext }}
 							{% endif %}
 							{% if planning.budget.id %}
 								<small>({{planning.budget.id}})</small>
 							{% else %}
-								<small class="bg-warning">({{ gettext("Budget ID not provided") }})</small>
+								<small class="bg-warning">({{ "Budget ID not provided" | gettext }})</small>
 							{% endif %}
 						</h4>
 					</div>
@@ -34,19 +34,19 @@
 				<div class="panel panel-{% if planning.budget.description and planning.budget.source %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Budget description") }} <small>({{ gettext("Source") }})</small>
+							{{ "Budget description" | gettext }} <small>({{ "Source" | gettext }})</small>
 						</h3>
 					</div>
 					<div class="panel-body">
 						{% if planning.budget.description %}
 							{{planning.budget.description}}
 						{% else %}
-							<span class="bg-warning">{{ gettext("Budget description not provided.") }}</span>
+							<span class="bg-warning">{{ "Budget description not provided." | gettext }}</span>
 						{% endif %}
 							{% if planning.budget.source %}
-								<small>(<a href="{{planning.budget.source}}" target="_blank">{{ gettext("Budget source") }}</a>)</small>
+								<small>(<a href="{{planning.budget.source}}" target="_blank">{{ "Budget source" | gettext }}</a>)</small>
 							{% else %}
-								<small class="bg-warning">({{ gettext("Budget source not provided") }})</small>
+								<small class="bg-warning">({{ "Budget source not provided" | gettext }})</small>
 							{% endif %}
 					</div>
 				</div>
@@ -57,14 +57,14 @@
 				<div class="panel panel-{% if planning.rationale %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Rationale") }}
+							{{ "Rationale" | gettext }}
 						</h3>
 					</div>
 					<div class="panel-body">
 						{% if planning.rationale %}
 							{{planning.rationale}}
 						{% else %}
-							{{ gettext("Budget rationale not provided") }}
+							{{ "Budget rationale not provided" | gettext }}
 						{% endif %}
 					</div>
 				</div>
@@ -73,19 +73,19 @@
 				<div class="panel panel-{% if planning.budget.project and planning.budget.projectID %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Project information") }} <small>({{gettext("ID")}})</small>
+							{{ "Project information" | gettext }} <small>({{"ID" | gettext}})</small>
 						</h3>
 					</div>
 					<div class="panel-body">
 						{% if planning.budget.project %}
 							{{planning.budget.project}}
 						{% else %}
-							<span class="bg-warning">{{ gettext("Project name not provided.") }}</span>
+							<span class="bg-warning">{{ "Project name not provided." | gettext }}</span>
 						{% endif %}
 						{% if planning.budget.projectID %}
 							<small>({{planning.budget.projectID}})</small>
 						{% else %}
-							<small class="bg-warning">({{ gettext("Project ID not provided") }})</small>
+							<small class="bg-warning">({{ "Project ID not provided" | gettext }})</small>
 						{% endif %}
 					</div>
 				</div>
@@ -100,11 +100,11 @@
 					<div class="panel panel-warning">
 						<div class="panel-heading">
 							<h3 class="panel-title">
-								{{ gettext("Documents") }}
+								{{ "Documents" | gettext }}
 							</h3>
 						</div>
 						<div class="panel-body">
-							{{ gettext("No documents provided") }}
+							{{ "No documents provided" | gettext }}
 						</div>
 					</div>
 				{% endif %}

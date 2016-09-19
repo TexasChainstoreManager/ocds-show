@@ -26,14 +26,14 @@
 				<div class="panel panel-{% if tender.description %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Description") }}
+							{{ "Description" | gettext }}
 						</h3>
 					</div>
 					<div class="panel-body">
 						{% if tender.description %}
 							{{ tender.description }}
 						{% else %}
-							{{ gettext("No description provided") }}
+							{{ "No description provided" | gettext }}
 						{% endif %}
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 				<div class="panel panel-{% if tender.status %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Status") }}
+							{{ "Status" | gettext }}
 						</h3>
 					</div>
 					<div class="panel-body">
@@ -50,31 +50,31 @@
 						{% if tender.status %}
 							{{ tender.status }}
 						{% else %}
-							{{ gettext("No status provided") }}
+							{{ "No status provided" | gettext }}
 						{% endif %}
 						</h4>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
-				<div class="panel panel-{% if tender.minvalue.amount or tender.value.amount %}default{% else %}warning{% endif %}">
+				<div class="panel panel-{% if tender.minValue.amount or tender.value.amount %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Value") }}
+							{{ "Value" | gettext }}
 						</h3>
 					</div>
 					<div class="panel-body">
-						<strong>{{ gettext("Lower: ")}}</strong>
+						<strong>{{ "Lower: " | gettext}}</strong>
 						{% if tender.minValue.amount %}
 							{{ tender.minValue.amount|currency }} <small>{{ tender.minValue.currency}}</small>
 						{% else %}
-							<span class="bg-warning">{{ gettext("No minimum value provided") }}</span>
+							<span class="bg-warning">{{ "No minimum value provided" | gettext }}</span>
 						{% endif %}
-						<p><strong>{{ gettext("Upper: ")}}</strong>
+						<p><strong>{{ "Upper: " | gettext}}</strong>
 						{% if tender.value.amount %}
 							{{ tender.value.amount|currency }} <small>{{ tender.value.currency}}</small></p>
 						{% else %}
-							<span class="bg-warning">{{ gettext("No value provided") }}</span>
+							<span class="bg-warning">{{ "No value provided" | gettext }}</span>
 						{% endif %}
 					</div>
 				</div>
@@ -85,14 +85,14 @@
 				<div class="panel panel-{% if tender.eligibilityCriteria %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Eligibility criteria")}}
+							{{ "Eligibility criteria" | gettext}}
 						</h3>
 					</div>
 					<div class="panel-body">
 						{% if tender.eligibilityCriteria %}
 							{{ tender.eligibilityCriteria }}
 						{% else %}
-							{{ gettext("No eligibility criteria provided") }}
+							{{ "No eligibility criteria provided" | gettext }}
 						{% endif %}
 					</div>
 				</div>
@@ -101,40 +101,40 @@
 				<div class="panel panel-{% if tender.tenderPeriod %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Key Dates")}}
+							{{ "Key Dates" | gettext}}
 						</h3>
 					</div>
 					<div class="panel-body">	<!-- add time hover over? -->
 						<p>
-							<strong>{{ gettext("Tender start: ")}}</strong>
+							<strong>{{ "Tender start: " | gettext}}</strong>
 							{% if tender.tenderPeriod.startDate %}
 								{{ tender.tenderPeriod.startDate|truncate(10,true,"")}}
 							{% else %}
-								<span class="bg-warning">{{ gettext("No start date provided") }}</span>
+								<span class="bg-warning">{{ "No start date provided" | gettext }}</span>
 							{% endif %}
 						</p>
 						<p>
-							<strong>{{ gettext("Tender end: ")}}</strong>
+							<strong>{{ "Tender end: " | gettext}}</strong>
 							{% if tender.tenderPeriod.endDate %}
 								{{ tender.tenderPeriod.endDate|truncate(10,true,"")}}
 							{% else %}
-								<span class="bg-warning">{{ gettext("No end date provided") }}</span>
+								<span class="bg-warning">{{ "No end date provided" | gettext }}</span>
 							{% endif %}
 						</p>
 						<p>
-							<strong>{{ gettext("Award start: ")}}</strong>
+							<strong>{{ "Award start: " | gettext}}</strong>
 							{% if tender.awardPeriod.startDate %}
 								{{ tender.awardPeriod.startDate|truncate(10,true,"")}}
 							{% else %}
-								<span class="bg-warning">{{ gettext("No start date provided") }}</span>
+								<span class="bg-warning">{{ "No start date provided" | gettext }}</span>
 							{% endif %}
 						</p>
 						<p>	
-							<strong>{{ gettext("Award end: ")}}</strong>
+							<strong>{{ "Award end: " | gettext}}</strong>
 							{% if tender.awardPeriod.endDate %}
 								{{ tender.awardPeriod.endDate|truncate(10,true,"")}}
 							{% else %}
-								<span class="bg-warning">{{ gettext("No end date provided") }}<span>
+								<span class="bg-warning">{{ "No end date provided" | gettext }}<span>
 							{% endif %}
 						</p>
 					</div>
@@ -144,33 +144,33 @@
 				<div class="panel panel-{% if tender.enquiryPeriod %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Enquiries")}}
+							{{ "Enquiries" | gettext}}
 						</h3>
 					</div>
 					<div class="panel-body">
 						<p>
 						{% if tender.hasEnquiries == false %}
-							{{ gettext("There have been no enquiries regarding this tender") }}
+							{{ "There have been no enquiries regarding this tender" | gettext }}
 						{% elif tender.hasEnquiries %}
-							{{ gettext("There have been enquiries regarding this tender") }}
+							{{ "There have been enquiries regarding this tender" | gettext }}
 						{% else %}
-							<span class="bg-warning">{{ gettext("No information on enquiries provided") }}</span>
+							<span class="bg-warning">{{ "No information on enquiries provided" | gettext }}</span>
 						{% endif %}
 						</p>
 						<p>
-							<strong>{{ gettext("Enquiries start: ")}}</strong>
+							<strong>{{ "Enquiries start: " | gettext}}</strong>
 							{% if tender.enquiryPeriod.startDate %}
 								{{ tender.enquiryPeriod.startDate|truncate(10,true,"")}}
 							{% else %}
-								<span class="bg-warning">{{ gettext("No start date provided") }}</span>
+								<span class="bg-warning">{{ "No start date provided" | gettext }}</span>
 							{% endif %}
 						</p>
 						<p>
-							<strong>{{ gettext("Enquiries end: ")}}</strong>
+							<strong>{{ "Enquiries end: " | gettext}}</strong>
 							{% if tender.enquiryPeriod.endDate %}
 								{{ tender.enquiryPeriod.endDate|truncate(10,true,"")}}
 							{% else %}
-								<span class="bg-warning">{{ gettext("No end date provided") }}</span>
+								<span class="bg-warning">{{ "No end date provided" | gettext }}</span>
 							{% endif %}
 						</p>
 					</div>
@@ -183,7 +183,7 @@
 				<div class="panel panel-{% if tender.procurementMethod %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Procurement method") }}
+							{{ "Procurement method" | gettext }}
 						</h3>
 					</div>
 					<div class="panel-body">
@@ -196,7 +196,7 @@
 							{% if tender.procurementMethodRationale %}
 								{{ tender.procurementMethodRationale}}
 							{% else %}
-								<span class="bg-warning">{{ gettext("No rationale provided") }}</span>
+								<span class="bg-warning">{{ "No rationale provided" | gettext }}</span>
 							{% endif %}
 						</p>
 					</div>
@@ -206,7 +206,7 @@
 				<div class="panel panel-{% if tender.awardCriteria %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Award criteria") }}
+							{{ "Award criteria" | gettext }}
 						</h3>
 					</div>
 					<div class="panel-body">
@@ -214,14 +214,14 @@
 							{% if tender.awardCriteria %}
 								{{ tender.awardCriteria }}
 							{% else %}
-								{{ gettext("No award criteria provided") }}
+								{{ "No award criteria provided" | gettext }}
 							{% endif %}
 						</h4>
 						<p>
 							{% if tender.awardCriteriaDetails %}
 								{{ tender.awardCriteriaDetails }}
 							{% else %}
-								<span class="bg-warning">{{ gettext("No award criteria details provided")}}</span>
+								<span class="bg-warning">{{ "No award criteria details provided" | gettext}}</span>
 							{% endif %}
 						</p>
 					</div>
@@ -231,7 +231,7 @@
 				<div class="panel panel-{% if tender.submissionMethod %}default{% else %}warning{% endif %}">
 					<div class="panel-heading">
 						<h3 class="panel-title">
-							{{ gettext("Submission method") }}
+							{{ "Submission method" | gettext }}
 						</h3>
 					</div>
 					<div class="panel-body">
@@ -239,14 +239,14 @@
 							{% if tender.submissionMethod %}
 								{{ tender.submissionMethod|join(", ")}}
 							{% else %}
-								{{ gettext("No submission method provided") }}
+								{{ "No submission method provided" | gettext }}
 							{% endif %}
 						</h4>
 						<p>
 							{% if tender.submissionMethodDetails %}
 								{{ tender.submissionMethodDetails}}
 							{% else %}
-								<span class="bg-warning">{{ gettext("No submission method details provided")}}</span>
+								<span class="bg-warning">{{ "No submission method details provided" | gettext}}</span>
 							{% endif %}
 						</p>
 					</div>
@@ -256,17 +256,17 @@
 		<div class="row">
 			<div class="col-md-12">
 				{% if tender.items %}
-					{% set items = tender.items %}
+					{% set foo = tender.items %}
 					{% include 'items.html' %}
 				{% else %}
 					<div class="panel panel-warning">
 						<div class="panel-heading">
 							<h3 class="panel-title">
-								{{ gettext("Items") }}
+								{{ "Items" | gettext }}
 							</h3>
 						</div>
 						<div class="panel-body">
-							{{ gettext("No items provided") }}
+							{{ "No items provided" | gettext }}
 						</div>
 					</div>
 				{% endif %}
@@ -281,11 +281,11 @@
 					<div class="panel panel-warning">
 						<div class="panel-heading">
 							<h3 class="panel-title">
-								{{ gettext("Documents") }}
+								{{ "Documents" | gettext }}
 							</h3>
 						</div>
 						<div class="panel-body">
-							{{ gettext("No documents provided") }}
+							{{ "No documents provided" | gettext }}
 						</div>
 					</div>
 				{% endif %}

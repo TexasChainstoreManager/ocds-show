@@ -1,7 +1,7 @@
 <div class="panel panel-{% if documents|length > 0 %}default{% else %}warning{% endif %}">
 	<div class="panel-heading">
 		<h3 class="panel-title">
-			{{ gettext("Documents") }}
+			{{ "Documents" | gettext }}
 		</h3>
 	</div>
 	<div class="panel-body">
@@ -9,13 +9,13 @@
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th>{{ gettext("Title") }}</th>
-						<th>{{ gettext("Type") }}</th>
-						<th>{{ gettext("Description") }}</th>
-						<th>{{ gettext("Date published") }}</th>
-						<th>{{ gettext("Date modified") }}</th>
-						<th>{{ gettext("Format") }}</th>
-						<th>{{ gettext("Language") }}</th>
+						<th>{{ "Title" | gettext }}</th>
+						<th>{{ "Type" | gettext }}</th>
+						<th>{{ "Description" | gettext }}</th>
+						<th>{{ "Date published" | gettext }}</th>
+						<th>{{ "Date modified" | gettext }}</th>
+						<th>{{ "Format" | gettext }}</th>
+						<th>{{ "Language" | gettext }}</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -25,7 +25,7 @@
 							<td>{{ document.type }}</td>
 							<td>{{ document.description }}</td>
 							<td>{{ document.datePublished|truncate(10,true,"") }}</td> <!-- add time hover over? -->
-							<td>{{ doucment.dateModified|truncate(10,true,"") }}</td> <!-- add time hover over? -->
+							<td>{{ document.dateModified|truncate(10,true,"") }}</td> <!-- add time hover over? -->
 							<td>{{ document.format}}</td>
 							<td>{{ document.language}}</td>
 						</tr>
@@ -33,7 +33,7 @@
 				</tbody>
 			</table>
 		{% else %}
-			{{ gettext("No documents provided") }}
+			{{ "No documents provided" | gettext }}
 		{% endif %}
 	</div>
 </div>
