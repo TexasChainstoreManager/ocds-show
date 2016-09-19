@@ -1,0 +1,220 @@
+example_release = {
+  "initiationType": "tender",
+  "buyer": {
+    "additionalIdentifiers": [
+      {
+        "scheme": "schemeA",
+        "id": "XXXXX",
+        "uri": "http://www.barnet.gov.uk/",
+        "legalName": "London Borough of Barnet"
+      },
+      {
+        "scheme": "schemeB",
+        "id": "YYYY",
+        "uri": "http://www.barnet.gov.uk/",
+        "legalName": "London Borough of Barnet"
+      }
+    ],
+    "contactPoint": {
+      "telephone": "01234 345 346",
+      "url": "http://example.com/contact/",
+      "faxNumber": "01234 345 345",
+      "name": "Procurement Team",
+      "email": "procurement-team@example.com"
+    },
+    "identifier": {
+      "scheme": "GB-LAC",
+      "id": "E09000003",
+      "uri": "http://www.barnet.gov.uk/",
+      "legalName": "London Borough of Barnet"
+    },
+    "name": "London Borough of Barnet",
+    "address": {
+      "postalCode": "N11 1NP",
+      "countryName": "United Kingdom",
+      "streetAddress": "4, North London Business Park, Oakleigh Rd S",
+      "region": "London",
+      "locality": "London"
+    }
+  },
+  "tender": {
+    "status": "planned",
+    "procurementMethod": "open",
+    "tenderPeriod": {
+      "startDate": "2010-02-01T00:00:00Z"
+    },
+    "eligibilityCriteria": "Bidders must be registered as xxxx in order to participate in the tender",
+    "description": "The authority plans to tender for improvements to the cycle lane in early 2010. This notice provides advanced notice of the intention to tender, and details to upcoming consultation events.",
+    "title": "Planned cycle lane improvements",
+    "submissionMethodDetails": "Bidders may submit their details via either hard or soft copy to the main contact point",
+    "items": [
+      {
+        "description": "string",
+        "classification": {
+          "scheme": "CPV",
+          "id": "45233130",
+          "uri": "http://cpv.data.ac.uk/code-45233130",
+          "description": "Construction work for highways"
+        },
+        "additionalClassifications": [
+          {
+            "scheme": "CPV",
+            "id": "45233162-2",
+            "uri": "http://cpv.data.ac.uk/code-45233162.html",
+            "description": "Cycle path construction work"
+          }
+        ],
+        "id": "0001",
+        "unit": {
+          "name": "Miles",
+          "value": {
+            "currency": "GBP",
+            "amount": 100000
+          }
+        },
+        "quantity": 10
+      },
+      {
+        "unit": {
+          "name": "Miles",
+          "value": {
+            "currency": "GBP",
+            "amount": 50000
+          }
+        },
+        "quantity": 10,
+        "id": "0002",
+        "classification": {
+          "scheme": "CPV",
+          "id": "45233320",
+          "uri": "http://cpv.data.ac.uk/code-45233320.html",
+          "description": "Foundation work for roads"
+        },
+        "description": "test string"
+      }
+    ],
+    "awardCriteriaDetails": "The best proposal, subject to value for money requirements, will be accepted.",
+    "value": {
+      "currency": "GBP",
+      "amount": 1000000
+    },
+    "minValue": {
+      "currency": "GBP",
+      "amount": 500000
+    },
+    "procuringEntity": {
+      "contactPoint": {
+        "telephone": "01234 345 346",
+        "url": "http://example.com/contact/",
+        "faxNumber": "01234 345 345",
+        "name": "Procurement Team",
+        "email": "procurement-team@example.com"
+      },
+      "identifier": {
+        "scheme": "GB-LAC",
+        "id": "E09000003",
+        "uri": "http://www.barnet.gov.uk/",
+        "legalName": "London Borough of Barnet"
+      },
+      "name": "London Borough of Barnet",
+      "address": {
+        "postalCode": "N11 1NP",
+        "countryName": "United Kingdom",
+        "streetAddress": "4, North London Business Park, Oakleigh Rd S",
+        "region": "London",
+        "locality": "London"
+      }
+    },
+    "awardPeriod": {
+      "startDate": "2010-06-01T00:00:00Z",
+      "endDate": "2011-06-01T23:59:59Z"
+    },
+    "awardCriteria": "bestProposal",
+    "enquiryPeriod": {
+      "startDate": "2010-03-01T09:00:00Z",
+      "endDate": "2010-03-14T17:30:00Z"
+    },
+    "documents": [
+      {
+        "description": "A consultation document inviting citizen input into cycle provision.",
+        "language": "en",
+        "documentType": "x_consultationDocument",
+        "url": "http://example.com/consultations/cycle-provision/",
+        "dateModified": "2015-02-15T00:00:00Z",
+        "format": "text/html",
+        "title": "Consultation on cycle provision",
+        "id": "0003",
+        "datePublished": "2015-02-15T00:00:00Z"
+      },
+      {
+        "description": "A map showing areas affected by the planned highway updates. Available from local libraries.",
+        "language": "en",
+        "format": "offline/print",
+        "title": "Map of affected areas",
+        "datePublished": "2015-02-15T00:00:00Z",
+        "documentType": "x_map",
+        "id": "0004"
+      }
+    ],
+    "procurementMethodRationale": "An open competitive tender is required by EU Rules",
+    "submissionMethod": [
+      "electronicSubmission",
+      "written"
+    ],
+    "id": "ocds-213czf-000-00001-01-planning",
+    "milestones": [
+      {
+        "dueDate": "2015-04-15T17:00:00Z",
+        "description": "A consultation period is open for citizen input to shape the final plans.",
+        "id": "0001",
+        "title": "Consultation Period"
+      }
+    ],
+    "hasEnquiries": false
+  },
+  "tag": [
+    "planning",
+    "tender"
+  ],
+  "language": "en",
+  "date": "2009-03-15T14:45:00Z",
+  "ocid": "ocds-213czf-000-00001",
+  "planning": {
+    "documents": [
+      {
+        "description": "The overall strategic framework for procurement to enhance cycle provision.",
+        "language": "en",
+        "documentType": "procurementPlan",
+        "url": "http://example.com/opencontracting/documents/planning/highways/procurementPlan.pdf",
+        "format": "application/pdf",
+        "title": "Area Wide Cycle Improvements - Procurement Plan",
+        "id": "0001",
+        "datePublished": "2009-01-05T00:00:00Z"
+      },
+      {
+        "description": "Needs assessment for provision for cyclists in the centre of town.",
+        "language": "en",
+        "documentType": "needsAssessment",
+        "url": "http://example.com/opencontracting/documents/ocds-213czf-000-00001/needsAssessment.pdf",
+        "format": "application/pdf",
+        "title": "Cycle provision - Needs Assessment",
+        "id": "0002",
+        "datePublished": "2009-01-15T00:00:00Z"
+      }
+    ],
+    "budget": {
+      "description": "Budget allocation for highway maintenance, aligned with 2015 strategic plan. ",
+      "projectID": "SP001",
+      "uri": "https://openspending.org/uk-barnet-budget/entries/6801ad388f3a38b7740dde20108c58b35984ee91",
+      "project": "Central Junction Cycle Scheme",
+      "source": "Highways and Pavements Budget",
+      "amount": {
+        "currency": "GBP",
+        "amount": 6700000
+      },
+      "id": "2016-HP-001"
+    },
+    "rationale": "The 2009 Strategic Plan identifies a need for an improved cycle route in the centre of town."
+  },
+  "id": "ocds-213czf-000-00001-01-planning"
+}
